@@ -37,8 +37,12 @@ export class BadTransactionDetailsComponent implements OnInit {
         icon: 'success',
         title: 'success changes',
         text: 'success validation',
+        confirmButtonText: 'Ok',
+        showLoaderOnConfirm: true,
+        preConfirm: (email) => {
+          this.router.navigateByUrl('/home');
+        }
       });
-      location.reload();
     }).catch(err => {
       console.log(err);
       $('.preloader').fadeOut();
@@ -56,8 +60,11 @@ export class BadTransactionDetailsComponent implements OnInit {
         icon: 'success',
         title: 'success remove',
         text: 'success remove',
+        confirmButtonText: 'Ok',
+        showLoaderOnConfirm: true,
+        preConfirm: (email) => {
+        }
       });
-      location.reload();
     }).catch(err => {
       console.log(err);
       $('.preloader').fadeOut();
