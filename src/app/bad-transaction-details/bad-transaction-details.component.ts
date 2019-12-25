@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 })
 export class BadTransactionDetailsComponent implements OnInit {
 
-  private transaction;
+  public transaction;
   transactionId: number;
 
   constructor(private router: Router, private managerTransactionService: ManagerTransactionService, private route: ActivatedRoute) {
